@@ -1,0 +1,39 @@
+.errorPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.700s both;
+}
+.errorPage h1{
+    font-size: 30vh;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: linear-gradient(45deg, var(--gradient));
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 0 15px;
+    letter-spacing: 30px;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.errorPage h1::after{
+    content: "the page you are looking for does not exist";
+    -webkit-text-stroke: 0px black;
+    font-size: 2vh;
+    color:black;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms cubic-bezier(0,.59,.43,.06);
+  }

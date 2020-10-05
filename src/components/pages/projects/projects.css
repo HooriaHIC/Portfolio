@@ -1,0 +1,463 @@
+.row{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--white);
+}
+
+.row .projectContainer{
+    background:var(--white);
+    flex: 1.5;
+    overflow-y: scroll;
+    animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.780, 0.600) 1.5s both;
+}
+
+.row .imageContainer {
+  position: relative;
+  flex: 1;
+  animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
+}
+.row .imageContainer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  background-size:  cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%; height: 100%;
+  background-image: url(../../../assets/me.jpg);
+  filter: grayscale(100%);
+}
+
+/*Cards*/
+.row .projectContainer .grid{
+  display: flex;
+  flex-wrap: wrap;
+  --parentWidth: 100%;
+  width: var(--parentWidth);
+  height: 100vh;
+}
+
+.row .projectContainer .grid .card{
+  height: 50vh;
+  width: calc(var(--parentWidth) / 2);
+  position: relative;
+  background-color: lightsalmon;
+  background-image: url(../../../assets/projects/web.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.row .projectContainer .grid .card:nth-child(2){
+  background-image: url(../../../assets/projects/app.png);
+}
+
+.row .projectContainer .grid .card:nth-child(3){
+  background-image: url(../../../assets/projects/game.png);
+}
+
+.row .projectContainer .grid .card:nth-child(4){
+  background-image: url(../../../assets/projects/frontend.png)
+}
+
+.row .projectContainer .grid .card::after{
+  content: "Web Development";
+  font-size: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--black);
+  font-family: 'Sacramento';
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(45deg, var(--gradient)); 
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: all 700ms ease-in-out;
+
+}
+.row .projectContainer .grid .card:nth-child(2)::after{
+  content: "Snaphunt";
+}
+
+.row .projectContainer .grid .card:nth-child(3)::after{
+  content: "Game Development";
+}
+
+.row .projectContainer .grid .card:nth-child(4)::after{
+  content: "Others";
+}
+
+.row .projectContainer .grid .card:hover::after{
+  opacity: 1;
+}
+
+
+
+/*App Development*/
+
+.appDevelopment{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--white);
+}
+
+
+/*Web Development*/
+
+.webDevelopment{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--white);
+}
+
+/*Game Development*/
+
+.gameDevelopment{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--white);
+}
+
+/*Others*/
+
+.others{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--white);
+}
+    
+  
+
+/* Inner Project Styles */
+
+.backButton{
+  font-size: 1.3em;
+  margin: 20px;
+  position: fixed;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.cardPages{
+  height: auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cardPage{
+  display: flex;
+  transition: all 1s ease-in-out;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 70%;
+  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+.cardPage .projectBanner{
+  position: relative;
+}
+
+.cardPage .projectBanner img{
+  height: 80vh;
+  width: 100%;
+  background-color: lightblue;
+  object-fit: cover;
+}
+
+.cardPage .projectBanner button{
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  bottom: 20px;
+}
+
+.cardPage .projectTitle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.cardPage .projectTitle h1{
+  font-size: calc(2vw + 2vh + 4vmin);
+  text-shadow: 10px 10px rgba(0, 0, 0, 0.11);
+  color: rgba(195, 0, 255, 0.555);
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cardPage .projectTitle h1:hover{
+  text-shadow: 15px 15px rgba(0, 0, 0, 0.11);
+}
+
+.cardPage .projectName{
+  font-size: calc(3vw + 3vh + 3vmin);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.cardPage .projectInfo{
+  display: flex;
+  padding-top: 10vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+  width: 100%;
+  height: auto;
+  padding-bottom: 40px;
+}
+
+.cardPage .projectInfo p{
+  font-size: 1.2em;
+  width: 50%;
+  line-height: 1;
+  height: 0px;
+}
+
+.cardPage .projectInfo p span{
+  color: grey;
+  margin-left: 5px;
+}
+
+.cardPage .projectDesc p .text-style{
+  color: var(--secondary-color);
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cardPage .projectDesc p .text-style:hover{
+  letter-spacing: 1px;
+  margin-left: 1px;
+}
+
+.cardPage .projectDesc {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  width: 100%;
+  height: auto;
+}
+
+.cardPage .projectDesc h3{
+  font-size: calc(1vw + 2vh + 1vmin);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.cardPage .projectDesc p{
+  font-size: 1.2em;
+  color: grey;
+}
+
+.cardPage .projectGallery {
+
+  width: 100%;
+  height: auto;
+}
+
+.cardPage .projectGallery h1{
+  font-size: calc(1vw + 2vh + 1vmin);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.cardPage .projectGallery .grid{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+}
+
+.cardPage .projectGallery .grid .smallImage{
+  width: 49%;
+  height: auto;
+  margin: 0.45%;
+  object-fit: cover;
+}
+.cardPage .projectGallery .grid .xsmallImage{
+  width: 30%;
+  height: auto;
+  margin: 0.45%;
+  object-fit: cover;
+}
+.cardPage .projectGallery .grid .bigVideo{
+  width: 90%;
+  height: auto;
+  margin: 0.45%;
+  object-fit: cover;
+}
+
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.ul {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.li {
+  display: inline-block;
+  margin: 10px;
+  width: 40%;
+}
+
+.download {
+  width: 100%;
+  height: 75px;
+  background: black;
+  float: left;
+  border-radius: 5px;
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+
+.download > .fa {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+
+.df,
+.dfn {
+  position: absolute;
+  left: 70px;
+}
+
+.df {
+  top: 20px;
+  font-size: .68em;
+}
+
+.dfn {
+  top: 33px;
+  font-size: 1.08em;
+}
+
+.download:hover {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.cardPage .projectTroopsie{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardPage .projectTroopsie p{
+  flex: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: grey;
+}
+
+.cardPage .projectTroopsie a{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cardPage .projectGallery .grid .bigImage{
+  width: 99%;
+  height: auto;
+  margin: 0.45%;
+  object-fit: cover;
+}
+
+.horizontal-ruler{
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  height: 5px;
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  text-shadow: 2px -2px var(--secondary-color);
+  font-size: 5vmin;
+  background-color: var(--black);
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.horizontal-ruler:hover{
+  width: 70vw;
+  color: var(--primary-color);
+  text-shadow: 0px -0px rgba(233, 65, 255, 0.507);
+  font-size: 5vmin;
+  background-color: var(--black);
+}
+
+.cardGallery{
+  display: flex;
+  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  background-color: #dddde6;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardGallery .card{
+  width: 250px;
+  margin: 10px;
+  height: 400px;
+  background-color: navajowhite;
+  background-size: cover;
+  background-position: center;
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cardGallery .card:hover{
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.2),
+              0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* media */
+@media(max-width: 700px){
+  .row .imageContainer{
+    display: none;
+  }
+  .row .projectContainer .grid .card{
+    width: calc(var(--parentWidth) / 1);
+    height: 100vh;
+  }
+  .cardPage .projectInfo p{
+    width: 100%;
+  }
+}
+
+

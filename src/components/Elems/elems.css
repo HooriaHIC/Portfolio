@@ -1,0 +1,198 @@
+
+button {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    text-transform: capitalize;
+    position: relative;
+    outline: none;
+    border: 2px solid black;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0.75em 1.65em;
+    display: inline-block;
+    color: var(--white);
+    background: -webkit-gradient(linear, left top, right top, from(var(--gradient)));
+    background: linear-gradient(to right, var(--gradient));
+}
+button:hover{
+  box-shadow: 4px 4px var(--secondary-color);
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: -10px;
+    left: 5%;
+    height: 110%;
+    width: 90%;
+    opacity: 0.9;
+    background: inherit;
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -o-filter: blur(6px);
+    -ms-filter: blur(6px);
+    filter: blur(6px);
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+button:hover::after {
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);
+    width: 100%;
+    bottom: -5px;
+    
+    left: 0;
+}
+  
+button:hover:active::after {
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+}
+  
+@supports (-ms-ime-align: auto) {
+    button {
+      box-shadow: 0 20px 20px -15px rgba(127, 0, 255, 0.8);
+    }
+  
+    button::after, button:hover::after, button:active::after {
+      display: none;
+    }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    button {
+      background: -webkit-gradient(linear, left top, right top, from(var(--primary-color)), to(var(--secondary-color)));
+      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+      box-shadow: 0 20px 20px -15px rgba(127, 0, 255, 0.8);
+      border-collapse: separate;
+    } 
+    button::after, button:hover::after, button:active::after {
+      display: none;
+    }
+}
+
+/* Navbar */
+
+@import url("https://fonts.googleapis.com/css?family=Oswald:500");
+
+nav {
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 30px;
+  right: 30px;
+  text-align: right;
+}
+
+nav a {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: linear-gradient(to top, var(--gradient));
+  -webkit-background-clip: text;
+  color: transparent;
+  margin: 0 15px;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+
+nav a:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #16151b;
+  top: 47%;
+  animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+
+nav a:hover:before {
+  animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+
+@keyframes in {
+  0% {
+    width: 0;
+    left: 0;
+    right: auto;
+  }
+  100% {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+@keyframes out {
+  0% {
+    width: 100%;
+    left: auto;
+    right: 0;
+  }
+  100% {
+    width: 0;
+    left: auto;
+    right: 0;
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav a:nth-child(1) {
+  animation: show 0.1s 0.5s ease 1 both;
+}
+
+nav a:nth-child(2) {
+  animation: show 0.1s 0.6s ease 1 both;
+}
+
+nav a:nth-child(3) {
+  animation: show 0.1s 0.7s ease 1 both;
+}
+
+nav a:nth-child(4) {
+  animation: show 0.1s 0.8s ease 1 both;
+}
+
+@media(max-width: 700px){
+  nav{
+    background:#353745;
+    box-shadow: 0 0 40px rgba(3, 3, 3, 0.486);
+    padding: 10px;
+    right: 0px;
+    width: 100%;
+    text-align: center;
+    display: inline-flex;
+    flex-wrap: wrap;
+    left: 0px;
+    bottom: 0;
+    top: auto;
+  }
+  nav a {
+    font-size: 1em;
+  }
+}
