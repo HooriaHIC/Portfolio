@@ -10,20 +10,20 @@ import {
   Route
 } from "react-router-dom";
 import './App.css';
-import AnimatedCursor from "react-animated-cursor";
+// import AnimatedCursor from "react-animated-cursor";
 
 function App() {
   return (
       <Router>
         <div>
-        <AnimatedCursor
+        {/* <AnimatedCursor
           innerSize={8}
           outerSize={20}
           color='183, 0, 255'
           outerAlpha={0.2}
           innerScale={1}
           outerScale={2}
-        />
+        /> */}
           <Switch>
             <Route path="/about">
               <About />
