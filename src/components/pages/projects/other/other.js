@@ -3,7 +3,7 @@ import '../projects.css';
 import { useHistory } from "react-router-dom";
 import css from "../../../../assets/projects/css.png";
 import threed from "../../../../assets/projects/3d.png";
-import apiandMicro from "../../../../assets/projects/api.png";
+import design from "../../../../assets/projects/design.png";
 
 
 function Others() {
@@ -20,8 +20,8 @@ function Others() {
                         <div className="card" style={{backgroundImage: `url(${threed})`}}>
                         </div>
                     </a>
-                    <a href="https://glitch.com/@HooriaHIC" title="click to view my Glitch Profile" target="_blank" rel="noopener noreferrer">
-                        <div className="card" style={{backgroundImage: `url(${apiandMicro})`}}>
+                    <a href="https://behance.net/hooriahic" title="click to view my Behance Profile" target="_blank" rel="noopener noreferrer">
+                        <div className="card" style={{backgroundImage: `url(${design})`}}>
                         </div>
                     </a>
                 </div>

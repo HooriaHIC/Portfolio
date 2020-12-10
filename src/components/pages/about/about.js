@@ -4,7 +4,10 @@ import Navbar from '../../Elems/navbar';
 
 import me from "../../../assets/me3.png";
 
+const age = new Date().getFullYear() - 2005;
+
 class About extends React.Component {
+
     render() {
         return (
             <div className="mainAbout">
@@ -16,16 +19,16 @@ class About extends React.Component {
                                 <p><span id="title-text">ABOUT</span></p>
                             </div>
                             <div class="projects aos-init aos-animate" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="700">
-                                <p> I’m Hooria Ishtiaq, a 14 y/o <span id="text-style">Developer + Designer</span>, currently studying <span id="text-style">Game Development.</span> I’m from <span id="text-style">Karachi, Pakistan</span>.  I've been programming since i was 9 yr/olds, I love to code and design. Other than programming, I like playing <span id="text-style">Guitar</span>, eating <span id="text-style">Food</span> and playing <span id="text-style">Video Games</span> :)
+                                <p> I’m Hooria Ishtiaq, a {age} y/o <span id="text-style">Developer + Designer</span>, currently studying <span id="text-style">Game Development.</span> I’m from <span id="text-style">Karachi, Pakistan</span>.  I've been programming since i was 9 yr/olds, I love to code and design. Other than programming, I like playing <span id="text-style">Guitar</span>, eating <span id="text-style">Food</span> and playing <span id="text-style">Video Games</span> :)
                                 </p>
                             </div>
                             <div class="more-info aos-init aos-animate" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="900">
                                 <p>
                                     <span style={{color: 'black', fontWeight: '500', paddingRight: '5px'}}>Education</span> Full Stack Development | Freecodecamp(2018), High School(2022).</p>
                                 <p>
-                                    <span style={{color: 'black', fontWeight: '500', paddingRight: '5px'}}>Skills</span> MernStack, React Native, Flutter, Unity, Blender, UI/UX, Api Development, HTML5, CSS3.</p>
+                                    <span style={{color: 'black', fontWeight: '500', paddingRight: '5px'}}>Skills</span> MernStack, React Native, Unity, UI Design, HTML5, CSS3, Adobe XD, UX Design.</p>
                                 <p>
-                                    <span style={{color: 'black', fontWeight: '500', paddingRight: '5px'}}>Languages</span>  English, Urdu, Hindi.</p>
+                                    <span style={{color: 'black', fontWeight: '500', paddingRight: '5px'}}>Languages</span>  English, Urdu.</p>
                             </div>
                         </div> 
                     </div>
