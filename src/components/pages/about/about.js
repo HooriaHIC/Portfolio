@@ -4,7 +4,7 @@ import Navbar from '../../Elems/navbar';
 
 import me from "../../../assets/me3.png";
 
-const age = new Date().getFullYear() - 2005;
+//const age = new Date().getFullYear() - 2005;
 
 class About extends React.Component {
 
@@ -19,7 +19,7 @@ class About extends React.Component {
                                 <p><span id="title-text">ABOUT</span></p>
                             </div>
                             <div class="projects aos-init aos-animate" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="700">
-                                <p> I’m Hooria Ishtiaq, a {age} y/o <span id="text-style">Developer + Designer</span>, currently studying <span id="text-style">Game Development.</span> I’m from <span id="text-style">Karachi, Pakistan</span>.  I've been programming since i was 9 yr/olds, I love to code and design. Other than programming, I like playing <span id="text-style">Guitar</span>, eating <span id="text-style">Food</span> and playing <span id="text-style">Video Games</span> :)
+                                <p> I’m Hooria Ishtiaq, a 15 y/o <span id="text-style">Developer + Designer</span>, currently studying <span id="text-style">Game Development.</span> I’m from <span id="text-style">Karachi, Pakistan</span>.  I've been programming since i was 9 yr/olds, I love to code and design. Other than programming, I like playing <span id="text-style">Guitar</span>, eating <span id="text-style">Food</span> and playing <span id="text-style">Video Games</span> :)
                                 </p>
                             </div>
                             <div class="more-info aos-init aos-animate" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="900">
